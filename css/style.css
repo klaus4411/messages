@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: aquamarine;
+}
+
+.card {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 14px;
+}
+
+.card-header {
+  background: #6a96d8;
+  border-radius: 14px 14px 0px 0px;
+  padding: 20px 29px 23px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  font-variant: small-caps;
+  color: #ffffff;
+  position: relative;
+}
+
+.card-title::before {
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  margin: auto 0;
+  left: -16px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.checkbox-img {
+  display: flex;
+  cursor: pointer;
+}
+
+.card-checkbox:checked ~ .checkbox-img {
+  transform: rotate(-135deg);
+  transition: 0.4s;
+}
+
+.card-main {
+  padding: 24px 24px 20px 24px;
+}
+
+.main-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.025em;
+  font-variant: small-caps;
+  color: #dddddd;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.main-title::before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  bottom: 0;
+  margin: auto 0;
+  content: "";
+  width: 146px;
+  height: 1px;
+  background-color: #dddddd;
+}
+
+.main-title::after {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  bottom: 0;
+  margin: auto 0;
+  content: "";
+  width: 146px;
+  height: 1px;
+  background-color: #dddddd;
+}
+
+.main-item {
+  position: relative;
+}
+
+.main-item::before {
+  position: absolute;
+  top: 24px;
+  left: -10px;
+  content: "";
+  border-top: 10px solid #e6edf6;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.main-item:last-child:before {
+  border: none;
+}
+
+.main-item:nth-child(2)::before {
+  border: none;
+  border-top: 10px solid #e6edf6;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: 20px;
+  left: auto;
+  right: -10px;
+}
+
+.main-item:nth-child(2n) {
+  margin-left: auto;
+}
+
+.main-item:nth-child(1),
+.main-item:nth-child(2) {
+  width: 275px;
+}
+
+.main-item:nth-child(3) {
+  width: 89px;
+}
+
+.main-item + .main-item {
+  margin-top: 16px;
+}
+
+.main-data {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #dddddd;
+}
+
+.messages {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 9px 0 11px 10px;
+  letter-spacing: -0.03em;
+  color: #000000;
+  background: #e6edf6;
+  margin-top: 6px;
+}
+
+.pink {
+  background: #ffc2c1;
+  width: 193px;
+  margin-left: auto;
+}
+
+.next-time {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forum {
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+}
+
+.send-inp {
+  width: 100%;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 54px;
+  padding: 13px 0 13px 20px;
+}
+
+.send-inp:focus {
+  box-shadow: 0 0 10px 0 rgb(8, 202, 147);
+}
+
+.send-inp::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #bdbdbd;
+}
+
+.send-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  font-variant: small-caps;
+  color: #ffffff;
+  background: #6a96d8;
+  border-radius: 100px;
+  padding: 9px 26px;
+  border: none;
+  cursor: pointer;
+}
